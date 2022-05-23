@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Pagination from './Pagination';
+import Loader from './Loader';
 
 
 function Home() {
@@ -44,7 +45,7 @@ function Home() {
       </h2>
     </div>
           <div className="my-6">{loading && (
-    <div className="lds-spinner text-center"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+   <Loader />
     
     )}</div>
 
