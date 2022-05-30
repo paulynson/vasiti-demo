@@ -1,8 +1,6 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 body {
   margin: 0 auto;
@@ -11,7 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 800px;
+  /* max-width: 800px; */
 }
 
 code {
@@ -21,21 +19,17 @@ code {
 
 /* Animation */
 
-.link{
+.link {
   padding: 4px 6px;
 }
-.link:hover{
+.link:hover {
   color: white;
-  background: blue;
-  padding: 4px 6px;
+  background: #ff5c00;
 }
 
-.active{
-  color: white !important;
-  background: blue;
-  padding: 4px 6px;
+.active {
+  color: #ff5c00;
 }
-
 
 /* Css Animation for Loader */
 
@@ -51,7 +45,7 @@ code {
   animation: lds-spinner 1.2s linear infinite;
 }
 .lds-spinner div:after {
-  content: " ";
+  content: ' ';
   display: block;
   position: absolute;
   top: 3px;
@@ -117,3 +111,26 @@ code {
     opacity: 0;
   }
 }
+
+.laglag {
+  /* background-image: url("https://www.vasiti.com/icon/footer/subscribe-banner.svg"); */
+  background-image: url('./assets/banner.svg');
+}
+
+input[type='file'] {
+  background-color: transparent;
+  color: black;
+}
+
+/* input[type=file] {
+  color: transparent;
+} */
+/* input[type=file]::-webkit-file-upload-button {
+  visibility: hidden;
+} */
+
+/* input[type=file]::before{
+  content: "Choose Image";
+  color: black;
+  padding: 8px 16px;
+} */
