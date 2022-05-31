@@ -66,7 +66,7 @@ function Home() {
             <h4 className="my-[24px] text-[32px] text-white">
               Tolu & Joy’s Experience
             </h4>
-            <p className="text-white py-[7px] px-[10px] border rounded-sm w-[95px] mb-12">
+            <p className="text-white py-[7px] px-[14px] border rounded-sm w-[95px] mb-12">
               CUSTOMER
             </p>
 
