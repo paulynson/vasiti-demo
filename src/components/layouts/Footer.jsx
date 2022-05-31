@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function Footer() {
+  const [moreOption, setMoreOption] = useState(false);
+
+
+
   return (
     <div className=''>
       <footer>
@@ -39,7 +43,7 @@ function Footer() {
                 </form>
               </div>
             </section>
-            <div className="text-white text-xs w-full py-6 md:hidden">
+            <div className="text-white text-xs flex justify-center space-x-3 w-full py-6 lg:hidden md:hidden">
               <div className="flex py-2 items-center">
                 <img
                   src="https://www.vasiti.com/icon/footer/email.svg"
@@ -59,7 +63,9 @@ function Footer() {
             </div>
           </section>
           <nav className="border-t border-dark-light font-medium text-xs text-center pt-4 md:hidden">
-            <div className="cursor-pointer flex p-4 justify-center items-center hover:text-primary-light">
+            <div className="cursor-pointer flex p-4 justify-center items-center hover:text-primary-light"
+            onClick={() => setMoreOption(!moreOption)} 
+            >
               <div>Show More Option</div>
               <img
                 src="https://www.vasiti.com/icon/footer/arrow-up.svg"
@@ -68,9 +74,11 @@ function Footer() {
               />
             </div>
           </nav>
-          <section className="hidden md:block">
-            <section className="flex  px-[180px]  py-4 md:py-12">
-              <div className="px-2 pt-4 w-1/2 md:px-4 lg:w-1/5">
+          <section className={ moreOption ? ' flex flex-col uppercase mt-2' : ' hidden md:block'
+                
+              }>
+            <section className="flex flex-col lg:flex lg:flex-row  lg:px-[120px] mx-auto lg:mx-5 lg:text-left text-center py-4 md:py-12">
+              <div className="px-2 pt-4 w-full justify-center md:px-4 lg:w-1/5">
                 <div className="font-bold text-base py-4 text-gray-100">
                   Company
                 </div>
@@ -100,7 +108,7 @@ function Footer() {
                 </a>
            
               </div>
-              <div className="px-2 pt-4 w-1/2 md:px-4 lg:w-1/5">
+              <div className="px-2 pt-4 w-full md:px-4 lg:w-1/5">
                 <div className="font-bold text-base py-4 text-gray-100">
                   Products
                 </div>
@@ -135,7 +143,7 @@ function Footer() {
                   Services
                 </a>
               </div>
-              <div className="px-2 pt-4 w-1/2 md:px-4 lg:w-1/5">
+              <div className="px-2 pt-4 w-full md:px-4 lg:w-1/5">
                 <div className="font-bold text-base py-4 text-gray-100">
                   Career
                 </div>
@@ -164,7 +172,7 @@ function Footer() {
                    Become an Affliate
                 </a>
               </div>
-              <div className="px-2 pt-4 w-1/2 md:px-4 lg:w-1/5">
+              <div className="px-2 pt-4 w-full md:px-4 lg:w-1/5">
                 <div className="font-bold text-base py-4 text-gray-100">
                   Get in touch
                 </div>
@@ -193,9 +201,9 @@ function Footer() {
                   Help/FAQs
                 </a>
               </div>
-              <div className="flex-grow px-2 pt-4 md:px-4">
+              <div className="flex-grow items-center justify-center text-center lg:text-left px-2 pt-4 md:px-4">
                 <div className="font-bold py-4">Join us on Social Media</div>
-                <div className="flex py-4">
+                <div className="flex py-4 items-center justify-center text-center lg:justify-start">
                   <a
                     href="https://www.facebook.com/VasitiMarketplace/"
                     className="mr-2 p-1"

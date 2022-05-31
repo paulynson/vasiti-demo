@@ -86,7 +86,7 @@ function Stories() {
     <div className="container mx-auto lg:px-[64px] px-8 lg:my-24">
       <div className="container flex justify-center mx-auto mb-24 mt-12">
         <button
-          className="text-white bg-[#FF5C00] px-6 py-3 rounded-md  hover:cursor-pointer uppercase"
+          className="text-[#FF5C00] hover:text-white hover:bg-[#FF5C00] px-6 py-3 rounded-md  hover:cursor-pointer uppercase border-[#FF5C00] border-2"
           onClick={() => handleShow()}
         >
           Share Story

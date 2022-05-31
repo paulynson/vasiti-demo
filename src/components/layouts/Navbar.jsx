@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink, Link } from 'react-router-dom';
 // import {useState} from 'react'
 import 'flowbite';
 import vasiti from '../../assets/Vasiti-Logo-black 1.png';
 
 function Navbar() {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [moreOption, setMoreOption] = useState(false);
 
   return (
     <header className=" flex justify-center text-center items-center flex-col">
@@ -62,8 +63,8 @@ function Navbar() {
               }
               id="example-navbar-danger"
             >
-              <ul className="flex flex-col lg:flex-row list-none lg:ml-auto text-[13px]">
-                <li className="my-3 px-4">
+              <ul className="flex lg:rounded-none rounded-md lg:w-auto lg:mx-0 lg:shadow-none lg:drop-shadow-none flex-col mx-auto my-6 bg-[#f5dcce13] drop-shadow-lg shadow-lg lg:bg-white w-full py-6 lg:flex-row list-none lg:ml-auto text-[13px]">
+                <li className="my-y lg:my-3 px-4">
                   <NavLink
                     to="/about"
                     className="text-[#242120] rounded-full hover:cursor-pointer hover:text-[#FF5C00] uppercase"
@@ -72,7 +73,7 @@ function Navbar() {
                   </NavLink>
                 </li>
 
-                <li className="my-3 px-4">
+                <li className="my-y lg:my-3 px-4">
                   <NavLink
                     to="/stories"
                     className="text-[#242120]  rounded-full hover:cursor-pointer hover:text-[#FF5C00] uppercase"
@@ -80,7 +81,7 @@ function Navbar() {
                     Stories
                   </NavLink>
                 </li>
-                <li className="my-3 px-4">
+                <li className="my-y lg:my-3 px-4">
                   <NavLink
                     to="/Contact"
                     className="text-[#242120]  rounded-full hover:cursor-pointer hover:text-[#FF5C00] uppercase"
@@ -89,7 +90,7 @@ function Navbar() {
                   </NavLink>
                 </li>
 
-                <li className="my-3 px-4">
+                <li className="my-y lg:my-3 px-4">
                   <NavLink
                     to="/Login"
                     className="text-[#242120]  rounded-full hover:cursor-pointer hover:text-[#FF5C00] uppercase"
@@ -97,7 +98,7 @@ function Navbar() {
                     Login
                   </NavLink>
                 </li>
-                <li className="my-3 px-4">
+                <li className="my-y lg:my-3 px-4">
                   <NavLink
                     to="/signup"
                     className="text-white bg-[#FF5C00] px-6 py-3 rounded-md  hover:cursor-pointer uppercase"
@@ -110,7 +111,22 @@ function Navbar() {
           </div>
         </nav>
       </>
-      <section className="uppercase text-[#242120] text-[13px] flex justify-center flex-col xl:flex-row space-x-0 lg:space-x-6  lg:flex-row flex-wrap border-[1px]  items-center text-center w-screen ">
+      <section>
+         <span className="sr-only">Open main menu</span>
+        <span className='flex items-center lg:hidden text-[12px] hover:opacity-80 text-slate-600 cursor-pointer'
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          onClick={() => setMoreOption(!moreOption)}> Show More Menus 
+        <svg className="w-12 h-12 ml-1 lg:hidden text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+
+        </span>
+       
+        <div
+          // id="dropdownNavbar"
+          className={ moreOption ? ' flex flex-col uppercase mt-4' : ' hidden lg:flex flex-grow flex-1 z-10 bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600 lg:uppercase text-[#242120] text-[13px] justify-center flex-col xl:flex-row space-x-0 lg:space-x-6  lg:flex-row flex-wrap border-[1px]  items-center text-center lg:w-screen uppercase'
+                
+              } >
+      
         <a
           href="/#"
           className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
@@ -146,7 +162,8 @@ function Navbar() {
           className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
         >
           events
-        </a>
+          </a>
+          </div>
       </section>
     </header>
   );

@@ -23,11 +23,11 @@ function Home() {
             <span className="block">Experiences from Our</span>
             <span className="block">Wonderful Customers</span>
           </h2>
-          <p className="text-[#494949]">
-            <span className="block">
+          <p className="text-[#494949] max-w-lg">
+            <span className="lg:block">
               Here is what customers and vendors are saying about
             </span>{' '}
-            <span className="block">
+            <span className="lg:block">
               us, you can share your stories with us too.
             </span>
           </p>
