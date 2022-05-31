@@ -15,7 +15,7 @@ function Navbar() {
           <div className="container px-4  flex flex-wrap items-center justify-between">
             <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
               <Link
-                to="/home"
+                to="/"
                 className="text-xl font-semibold  text-[#242120] uppercase"
               >
                 <img src={vasiti} alt="vasati" className="w-[150px] h-[35px]" />
