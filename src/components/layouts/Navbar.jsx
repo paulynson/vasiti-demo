@@ -57,7 +57,7 @@ function Navbar() {
             </div>
             <div
               className={
-                'lg:flex flex-grow items-center' +
+                'lg:flex flex-grow items-center flex-1' +
                 (navbarOpen ? ' flex' : ' hidden')
               }
               id="example-navbar-danger"
@@ -110,7 +110,7 @@ function Navbar() {
           </div>
         </nav>
       </>
-      <section className="uppercase text-[#242120] text-[13px] flex justify-center flex-col xl:flex-row space-x-6  lg:flex-row flex-wrap border-[1px]  items-center text-center w-screen ">
+      <section className="uppercase text-[#242120] text-[13px] flex justify-center flex-col xl:flex-row space-x-0 lg:space-x-6  lg:flex-row flex-wrap border-[1px]  items-center text-center w-screen ">
         <a
           href="/#"
           className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
