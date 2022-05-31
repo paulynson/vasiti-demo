@@ -289,7 +289,7 @@ function Stories() {
             <img
               src={post.pix}
               alt={post.fname}
-              className=" w-[200px] h-[200px] rounded-full my-4 lg:my-4"
+              className=" w-[200px] border-[0.5px] border-[#FF5C00] h-[200px] rounded-full my-4 lg:my-4"
             />
             <h5 className="font-bold text-2xl">
               {post.fname} {post.lname}
