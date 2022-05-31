@@ -64,7 +64,7 @@ function Navbar() {
               id="example-navbar-danger"
             >
               <ul className="flex lg:rounded-none rounded-md lg:w-auto lg:mx-0 lg:shadow-none lg:drop-shadow-none flex-col mx-auto my-6 bg-[#f5dcce13] drop-shadow-lg shadow-lg lg:bg-white w-full py-6 lg:flex-row list-none lg:ml-auto text-[13px]">
-                <li className="my-y lg:my-3 px-4">
+                <li className="my-y lg:my-3 px-4 my-6">
                   <NavLink
                     to="/about"
                     className="text-[#242120] rounded-full hover:cursor-pointer hover:text-[#FF5C00] uppercase"
@@ -73,7 +73,7 @@ function Navbar() {
                   </NavLink>
                 </li>
 
-                <li className="my-y lg:my-3 px-4">
+                <li className="my-y lg:my-3 px-4 my-6">
                   <NavLink
                     to="/stories"
                     className="text-[#242120]  rounded-full hover:cursor-pointer hover:text-[#FF5C00] uppercase"
@@ -81,7 +81,7 @@ function Navbar() {
                     Stories
                   </NavLink>
                 </li>
-                <li className="my-y lg:my-3 px-4">
+                <li className="my-y lg:my-3 px-4 my-6">
                   <NavLink
                     to="/Contact"
                     className="text-[#242120]  rounded-full hover:cursor-pointer hover:text-[#FF5C00] uppercase"
@@ -90,7 +90,7 @@ function Navbar() {
                   </NavLink>
                 </li>
 
-                <li className="my-y lg:my-3 px-4">
+                <li className="my-y lg:my-3 px-4 my-6">
                   <NavLink
                     to="/Login"
                     className="text-[#242120]  rounded-full hover:cursor-pointer hover:text-[#FF5C00] uppercase"
@@ -98,7 +98,7 @@ function Navbar() {
                     Login
                   </NavLink>
                 </li>
-                <li className="my-y lg:my-3 px-4">
+                <li className="my-y lg:my-3 px-4 my-6">
                   <NavLink
                     to="/signup"
                     className="text-white bg-[#FF5C00] hover:bg-opacity-90 px-6 py-3 rounded-md  hover:cursor-pointer uppercase"
