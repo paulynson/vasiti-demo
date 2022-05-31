@@ -101,7 +101,7 @@ function Navbar() {
                 <li className="my-y lg:my-3 px-4 my-6">
                   <NavLink
                     to="/signup"
-                    className="text-white bg-[#FF5C00] hover:bg-opacity-90 px-6 py-3 rounded-md  hover:cursor-pointer uppercase"
+                    className="text-white bg-[#FF5C00] hover:bg-[#FF5C3d] px-6 py-3 rounded-md  hover:cursor-pointer uppercase"
                   >
                     Sign Up
                   </NavLink>

@@ -89,7 +89,7 @@ function Stories() {
           className="text-[#FF5C00] hover:text-white hover:bg-[#FF5C00] px-6 py-3 rounded-md  hover:cursor-pointer uppercase border-[#FF5C00] border-2"
           onClick={() => handleShow()}
         >
-          Share Story
+          Add Story
         </button>
       </div>
       {/* ---------------------------------Displays Pop up----------------------------------- */}
