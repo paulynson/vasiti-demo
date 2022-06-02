@@ -53,7 +53,7 @@ code {
   width: 6px;
   height: 18px;
   border-radius: 20%;
-  background: rgb(79, 89, 221);
+  background: #FF5C00;
 }
 .lds-spinner div:nth-child(1) {
   transform: rotate(0deg);
@@ -134,3 +134,5 @@ input[type='file'] {
   color: black;
   padding: 8px 16px;
 } */
+
+

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Loader from '../Loader';
+import zigzag from '../../assets/zigzag.svg';
 
 function Stories() {
   const [posts, setPosts] = useState([]);
@@ -45,9 +46,20 @@ function Stories() {
   };
 
   //   Handle pix upload
-  function handleUpload(event) {
-    setPix(event.target.files[0].value);
-  }
+  function handleUpload(e) {
+    // const preview = document.querySelector('img');
+    const file = document.querySelector('input[type=file]').files[0];
+    const reader = new FileReader();
+  
+    reader.addEventListener("load", function () {
+      // convert image file to base64 string
+      setPix(reader.result);
+    }, false);
+  
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+    }
 
   // Handles Fetch Data
 
@@ -58,7 +70,7 @@ function Stories() {
         `https://airy-verdant-shoemaker.glitch.me/posts`
       );
       setPosts(res.data);
-      console.log(res.data);
+      // console.log(res.data);
       setLoading(false);
     };
 
@@ -70,14 +82,8 @@ function Stories() {
   // handles Post request
   const handleSubmit = (e) => {
     e.preventDefault();
-    //     const formData = new FormData();
-    //     formData.append('file', pix);
-    //   formData.append('fileName', pix.name);
     let postData = { pix, fname, lname, comment, title };
-    //   console.log(formData)
     setIsPending(true);
-
-    // console.log(post);
     fetch('https://airy-verdant-shoemaker.glitch.me/posts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -121,7 +127,7 @@ function Stories() {
                     accept="jpeg, png, jpg"
                     type="file"
                     required
-                    value={pix}
+                    // value={pix}
                     onChange={handleUpload}
                   />
                 </div>
@@ -239,10 +245,11 @@ function Stories() {
                   )}
                   {isPending && (
                     <button
-                      className="text-white bg-[#FF5C00] px-6 py-4 rounded-md  hover:cursor-pointer uppercase"
+                      className="text-white bg-[#FF5C00] px-6 py-4 space-x-3 gap-x-2 items-center  justify-center rounded-md  uppercase flex position-relative"
                       disabled
                     >
-                      Sharing Story...
+                      <img src={zigzag} alt="zigzag" />
+                    Sharing
                     </button>
                   )}
                 </div>
