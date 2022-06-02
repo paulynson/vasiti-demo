@@ -28,6 +28,13 @@ function Stories() {
   const handleClose = () => {
     setStory(!story);
     setShow(!show);
+    // Empty all inputs
+    setFname('');
+    setLname('');
+    setPix('');
+    setComment('');
+    setTitle('');
+    // Navigate to the story page
     navigate('/stories');
     console.log('close btn clicked');
   };
@@ -111,6 +118,7 @@ function Stories() {
                     className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                     aria-describedby="user_avatar_help"
                     id="user_avatar"
+                    accept="jpeg, png, jpg"
                     type="file"
                     required
                     value={pix}
@@ -277,9 +285,8 @@ function Stories() {
       ) : (
         ''
       )}
-    
-          
-{/* Loader */}
+
+      {/* Loader */}
       <div className="my-6">{loading && <Loader />}</div>
 
       <section className="flex flex-col lg:grid-cols-3 lg:grid lg:gap-12 container lg:items-center px-8 lg:px-24 space-y-24 lg:space-y-0 lg:my-32 my-16 mx-auto">
