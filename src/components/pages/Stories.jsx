@@ -298,7 +298,7 @@ function Stories() {
 
       <section className="flex flex-col lg:grid-cols-3 lg:grid lg:gap-12 container lg:items-center px-8 lg:px-24 space-y-24 lg:space-y-0 lg:my-32 my-16 mx-auto">
         {/* Fetching Stories from the Server */}
-        {posts?.map((post) => (
+        {posts?.slice(0).reverse().map((post) => (
           <div className="">
             <img
               src={post.pix}
