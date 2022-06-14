@@ -25,6 +25,20 @@ function Stories() {
     setShow(!show);
   };
 
+// handles shared post button
+
+  // Handles close popup menu
+  const handleClosePost = () => {
+    setShow(!show);
+    // Empty all inputs
+    setFname('');
+    setLname('');
+    setPix('');
+    setComment('');
+    setTitle('');
+  };
+
+
   // Handles close popup menu
   const handleClose = () => {
     setStory(!story);
@@ -75,7 +89,7 @@ function Stories() {
     };
 
     handlesFetchData();
-  }, []);
+  }, [setPosts]);
 
   // Handles Fetch Data
 
@@ -109,14 +123,19 @@ function Stories() {
       <>
         {show ? (
           <div className="w-screen top-0 left-0 fixed bg-slate-50 lg:h-screen h-screen z-40 flex justify-center items-center ">
-            <div className="lg:max-h-[550px] lg:max-w-[527px] bg-white rounded-xl drop-shadow-lg text-center lg:px-12 px-8">
-              <h2 className="lg:mt-[37px] mt-6 font-bold lg:text-3xl text-2xl">
+          
+            <div className="lg:max-h-[570px] lg:max-w-[527px] bg-white rounded-xl drop-shadow-lg text-center lg:px-12 px-8 position-relative">
+            <p className="fixed -right-10 top-4 -translate-y-2 -translate-x-12 h-8 w-8 flex justify-center items-center hover:bg-red-400 hover:text-white p-2 bg-slate-200 z-10 rounded-full cursor-pointer"
+            onClick={handleClosePost}>X</p>
+              <h2 className="lg:mt-[15px] mt-6 font-bold lg:text-3xl text-2xl">
                 Share your amazing story!
               </h2>
+             
 
               {/* Form Section */}
 
-              <form className="lg:mt-[43px] mt-6" onSubmit={handleSubmit}>
+              <form className="lg:mt-[25px] mt-6" onSubmit={handleSubmit}>
+              
                 {/* Form Title */}
                 <div className="flex flex-col justify-start text-left space-y-2">
                   <label className="text-xs">Upload your Picture </label>
@@ -303,7 +322,7 @@ function Stories() {
             <img
               src={post.pix}
               alt={post.fname}
-              className=" w-[200px] border-[0.5px] border-[#FF5C00] h-[200px] rounded-full my-4 lg:my-4"
+              className=" w-[200px] border-[0.5px] border-[#FF5C00] h-[200px] rounded-full my-4 lg:my-4 object-cover"
             />
             <h5 className="font-bold text-2xl">
               {post.fname} {post.lname}
