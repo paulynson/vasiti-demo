@@ -3,12 +3,6 @@ import imgtop from "../../assets/imgtop.svg";
 import bb from "../../assets/bb.png";
 import bd from "../../assets/bd.png";
 import line from "../../assets/line.png";
-import joe from "../../assets/joe.png";
-import ade from "../../assets/ade.png";
-import emma from "../../assets/emma.png";
-import adu from "../../assets/adu.png";
-import chisom from "../../assets/chisom.png";
-import chidi from "../../assets/chidi.png";
 import woman from "../../assets/woman.png";
 
 function Home() {
@@ -90,9 +84,13 @@ function Home() {
       <section className="flex flex-col lg:grid-cols-3 lg:grid lg:gap-12 container lg:items-center px-8 lg:px-24 space-y-24 lg:space-y-0 my-16 mx-auto">
         {/* First Content */}
         <div className="">
-          <img src={joe} alt="" className=" w-[200px] h-[200px]" />
-          <h5 className="font-bold text-2xl">Joseph Ike</h5>
-          <div className="uppercase space-x-4 flex my-4 items-center font-bold">
+          <img
+            src="https://i.ibb.co/3TJX60j/joe.png"
+            alt="Ike"
+            className=" w-[200px] h-[200px]"
+          />
+          <h5 className="font-bold text-2xl mt-[32px]">Joseph Ike</h5>
+          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
             <p>In Ikeja</p>
             <p className="bg-blue-100 p-2">customer</p>
           </div>
@@ -106,9 +104,13 @@ function Home() {
 
         {/* Second Content */}
         <div className="">
-          <img src={ade} alt="" className=" w-[200px] h-[200px]" />
-          <h5 className="font-bold text-2xl">Adetola Fashina</h5>
-          <div className="uppercase space-x-4 flex my-4 items-center font-bold">
+          <img
+            src="https://i.ibb.co/ZL7mcq4/ade.png"
+            alt="Ade"
+            className=" w-[200px] h-[200px]"
+          />
+          <h5 className="font-bold text-2xl mt-[32px]">Adetola Fashina</h5>
+          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
             <p>Ibadan</p>
             <p className="bg-blue-100 p-2">customer</p>
           </div>
@@ -122,9 +124,13 @@ function Home() {
 
         {/* Third Content */}
         <div className="">
-          <img src={emma} alt="" className=" w-[200px] h-[200px]" />
-          <h5 className="font-bold text-2xl">Emmanuel Fayemi</h5>
-          <div className="uppercase space-x-4 flex my-4 items-center font-bold">
+          <img
+            src="https://i.ibb.co/bv89SF2/emma.png"
+            alt="Emma"
+            className=" w-[200px] h-[200px]"
+          />
+          <h5 className="font-bold text-2xl mt-[32px]">Emmanuel Fayemi</h5>
+          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
             <p>In Akoka</p>
             <p className="bg-blue-100 p-2">customer</p>
           </div>
@@ -138,9 +144,13 @@ function Home() {
 
         {/* Forth Content */}
         <div className="">
-          <img src={chisom} alt="" className="w-[200px] h-[200px]" />
-          <h5 className="font-bold text-2xl">Joseph Ike</h5>
-          <div className="uppercase space-x-4 flex my-4 items-center font-bold">
+          <img
+            src="https://i.ibb.co/b3prKQt/chisom.png"
+            alt="chisom"
+            className="w-[200px] h-[200px]"
+          />
+          <h5 className="font-bold text-2xl mt-[32px]">Chisom Obilor</h5>
+          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
             <p>In Ikeja</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -154,9 +164,13 @@ function Home() {
 
         {/* Fifth Content */}
         <div className="">
-          <img src={adu} alt="" className=" w-[200px] h-[200px]" />
-          <h5 className="font-bold text-2xl">Adetola Fashina</h5>
-          <div className="uppercase space-x-4 flex my-4 items-center font-bold">
+          <img
+            src="https://i.ibb.co/h2TYfBg/adu.png"
+            alt="Adu"
+            className=" w-[200px] h-[200px]"
+          />
+          <h5 className="font-bold text-2xl mt-[32px]">Adunoluwa Adeyemi</h5>
+          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
             <p>Ibadan</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -170,9 +184,13 @@ function Home() {
 
         {/* Sixth Content */}
         <div className="">
-          <img src={chidi} alt="" className=" w-[200px] h-[200px]" />
-          <h5 className="font-bold text-2xl">Emmanuel Fayemi</h5>
-          <div className="uppercase space-x-4 flex my-4 items-center font-bold">
+          <img
+            src="https://i.ibb.co/nbH0Mvd/chidi.png"
+            alt="Chidi"
+            className=" w-[200px] h-[200px]"
+          />
+          <h5 className="font-bold text-2xl mt-[32px]">Chidi Okeke</h5>
+          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
             <p>In Akoka</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -233,9 +251,13 @@ function Home() {
       <section className="flex flex-col lg:grid-cols-3 lg:grid lg:gap-12 container lg:items-center px-8 lg:px-24 space-y-24 lg:space-y-0 my-16 mx-auto lg:my-24">
         {/* First Content */}
         <div className="">
-          <img src={joe} alt="" className=" w-[200px] h-[200px]" />
-          <h5 className="font-bold text-2xl">Joseph Ike</h5>
-          <div className="uppercase space-x-4 flex my-4 items-center font-bold">
+          <img
+            src="https://i.ibb.co/3yRtcTd/Ellipse-22-3.png"
+            alt="Temi"
+            className=" w-[200px] h-[200px]"
+          />
+          <h5 className="font-bold text-2xl mt-[32px]">Temi Obadofin</h5>
+          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
             <p>In Ikeja</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -249,9 +271,13 @@ function Home() {
 
         {/* Second Content */}
         <div className="">
-          <img src={ade} alt="" className=" w-[200px] h-[200px]" />
-          <h5 className="font-bold text-2xl">Adetola Fashina</h5>
-          <div className="uppercase space-x-4 flex my-4 items-center font-bold">
+          <img
+            src="https://i.ibb.co/9sMFswh/Ellipse-23-2.png"
+            alt="Promise"
+            className=" w-[200px] h-[200px]"
+          />
+          <h5 className="font-bold text-2xl mt-[32px]">Promise Ejiofor</h5>
+          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
             <p>Ibadan</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -265,8 +291,12 @@ function Home() {
 
         {/* Third Content */}
         <div className="">
-          <img src={emma} alt="" className=" w-[200px] h-[200px]" />
-          <h5 className="font-bold text-2xl">Emmanuel Fayemi</h5>
+          <img
+            src="https://i.ibb.co/9ZpRr84/Ellipse-24-2.png"
+            alt="Feyisola"
+            className=" w-[200px] h-[200px]"
+          />
+          <h5 className="font-bold text-2xl">Feyisola Arinola</h5>
           <div className="uppercase space-x-4 flex my-4 items-center font-bold">
             <p>In Akoka</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
@@ -281,9 +311,13 @@ function Home() {
 
         {/* Forth Content */}
         <div className="">
-          <img src={chisom} alt="" className="w-[200px] h-[200px]" />
-          <h5 className="font-bold text-2xl">Joseph Ike</h5>
-          <div className="uppercase space-x-4 flex my-4 items-center font-bold">
+          <img
+            src="https://i.ibb.co/cJzWF9S/Ellipse-22-4.png"
+            alt="Karen"
+            className="w-[200px] h-[200px]"
+          />
+          <h5 className="font-bold text-2xl mt-[32px]">Karen Ibeh</h5>
+          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
             <p>In Ikeja</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -297,9 +331,13 @@ function Home() {
 
         {/* Fifth Content */}
         <div className="">
-          <img src={adu} alt="" className=" w-[200px] h-[200px]" />
-          <h5 className="font-bold text-2xl">Adetola Fashina</h5>
-          <div className="uppercase space-x-4 flex my-4 items-center font-bold">
+          <img
+            src="https://i.ibb.co/vLmNRF8/Ellipse-23-3.png"
+            alt="Oluchi"
+            className=" w-[200px] h-[200px]"
+          />
+          <h5 className="font-bold text-2xl mt-[32px]">Oluchi Uzo</h5>
+          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
             <p>Ibadan</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -313,9 +351,13 @@ function Home() {
 
         {/* Sixth Content */}
         <div className="">
-          <img src={chidi} alt="" className=" w-[200px] h-[200px]" />
-          <h5 className="font-bold text-2xl">Emmanuel Fayemi</h5>
-          <div className="uppercase space-x-4 flex my-4 items-center font-bold">
+          <img
+            src="https://i.ibb.co/HYkxh06/Ellipse-24-3.png"
+            alt="Amos"
+            className=" w-[200px] h-[200px]"
+          />
+          <h5 className="font-bold text-2xl mt-[32px]">Amos Okafor</h5>
+          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
             <p>In Akoka</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
