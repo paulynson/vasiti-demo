@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <header className=" flex justify-center text-center items-center flex-col">
       <>
-        <nav className="flex  flex-wrap container mx-auto items-center justify-between lg:px-[84px] px-8 p4-8 bg-white text-[#242120] ">
+        <nav className="flex  flex-wrap container mx-auto items-center justify-between lg:py-4 lg:px-[84px] px-8 py-8 bg-white text-[#242120] ">
           <div className="container px-4  flex flex-wrap items-center justify-between">
             <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
               <Link
