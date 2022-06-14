@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 // import {useState} from 'react'
-import 'flowbite';
-import vasiti from '../../assets/Vasiti-Logo-black 1.png';
+import "flowbite";
+import vasiti from "../../assets/Vasiti-Logo-black 1.png";
 
 function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -58,8 +58,8 @@ function Navbar() {
             </div>
             <div
               className={
-                'lg:flex flex-grow items-center flex-1' +
-                (navbarOpen ? ' flex' : ' hidden')
+                "lg:flex flex-grow items-center flex-1" +
+                (navbarOpen ? " flex" : " hidden")
               }
               id="example-navbar-danger"
             >
@@ -112,58 +112,74 @@ function Navbar() {
         </nav>
       </>
       <section>
-         <span className="sr-only">Open main menu</span>
-        <span className='flex items-center lg:hidden text-[12px] hover:opacity-80 text-slate-600 cursor-pointer'
+        <span className="sr-only">Open main menu</span>
+        <span
+          className="flex items-center lg:hidden text-[12px] hover:opacity-80 text-slate-600 cursor-pointer"
           aria-controls="mobile-menu"
           aria-expanded="false"
-          onClick={() => setMoreOption(!moreOption)}> Show More Menus 
-        <svg className="w-12 h-12 ml-1 lg:hidden text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-
+          onClick={() => setMoreOption(!moreOption)}
+        >
+          {" "}
+          Show More Menus
+          <svg
+            className="w-12 h-12 ml-1 lg:hidden text-black"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
         </span>
-       
+
         <div
           // id="dropdownNavbar"
-          className={ moreOption ? ' flex flex-col uppercase mt-4' : ' hidden lg:flex flex-grow flex-1 z-10 bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600 lg:uppercase text-[#242120] text-[13px] justify-center flex-col xl:flex-row space-x-0 lg:space-x-6  lg:flex-row flex-wrap border-[1px]  items-center text-center lg:w-screen uppercase'
-                
-              } >
-      
-        <a
-          href="/#"
-          className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
+          className={
+            moreOption
+              ? " flex flex-col uppercase mt-4"
+              : " hidden lg:flex flex-grow flex-1 z-10 bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600 lg:uppercase text-[#242120] text-[13px] justify-center flex-col xl:flex-row space-x-0 lg:space-x-6  lg:flex-row flex-wrap border-[1px]  items-center text-center lg:w-screen uppercase"
+          }
         >
-          marketplace
-        </a>
-        <a
-          href="/#"
-          className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
-        >
-          wholesale center
-        </a>
-        <a
-          href="/#"
-          className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
-        >
-          seller center
-        </a>
-        <a
-          href="/#"
-          className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
-        >
-          services
-        </a>
-        <a
-          href="/#"
-          className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
-        >
-          internships
-        </a>
-        <a
-          href="/#"
-          className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
-        >
-          events
+          <a
+            href="/#"
+            className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
+          >
+            marketplace
           </a>
-          </div>
+          <a
+            href="/#"
+            className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
+          >
+            wholesale center
+          </a>
+          <a
+            href="/#"
+            className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
+          >
+            seller center
+          </a>
+          <a
+            href="/#"
+            className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
+          >
+            services
+          </a>
+          <a
+            href="/#"
+            className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
+          >
+            internships
+          </a>
+          <a
+            href="/#"
+            className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
+          >
+            events
+          </a>
+        </div>
       </section>
     </header>
   );

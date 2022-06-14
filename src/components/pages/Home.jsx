@@ -1,16 +1,15 @@
-import backtop from '../../assets/backtop.png';
-import imgtop from '../../assets/imgtop.svg';
-import bb from '../../assets/bb.png';
-import bd from '../../assets/bd.png';
-import line from '../../assets/line.png';
-import joe from '../../assets/joe.png';
-import ade from '../../assets/ade.png';
-import emma from '../../assets/emma.png';
-import adu from '../../assets/adu.png';
-import chisom from '../../assets/chisom.png';
-import chidi from '../../assets/chidi.png';
-import woman from '../../assets/woman.png';
-
+import backtop from "../../assets/backtop.png";
+import imgtop from "../../assets/imgtop.svg";
+import bb from "../../assets/bb.png";
+import bd from "../../assets/bd.png";
+import line from "../../assets/line.png";
+import joe from "../../assets/joe.png";
+import ade from "../../assets/ade.png";
+import emma from "../../assets/emma.png";
+import adu from "../../assets/adu.png";
+import chisom from "../../assets/chisom.png";
+import chidi from "../../assets/chidi.png";
+import woman from "../../assets/woman.png";
 
 function Home() {
   return (
@@ -26,7 +25,7 @@ function Home() {
           <p className="text-[#494949] max-w-lg">
             <span className="lg:block">
               Here is what customers and vendors are saying about
-            </span>{' '}
+            </span>{" "}
             <span className="lg:block">
               us, you can share your stories with us too.
             </span>
@@ -188,10 +187,9 @@ function Home() {
 
       {/* Forth Section */}
 
-         {/*  */}
-         <section className=" bg-white lg:w-full px-8">
+      {/*  */}
+      <section className=" bg-white lg:w-full px-8">
         <div className="lg:px-[70px] pt-24 lg:flex lg:relative flex  lg:flex-row flex-col-reverse">
-         
           <div className="lg:w-1/2  px-8 lg:py-[64px]">
             <h4 className="my-[24px] text-[32px] text-black">
               Tolu & Joy’s Experience
@@ -329,7 +327,6 @@ function Home() {
           </p>
         </div>
       </section>
-
     </div>
   );
 }

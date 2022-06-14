@@ -1,22 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 
 function Footer() {
   const [moreOption, setMoreOption] = useState(false);
 
-
-
   return (
-    <div className=''>
+    <div className="">
       <footer>
         <section className="mt-12 text-white py-8 md:py-12 bg-[#25201D] p-8">
           <section className="container ">
             <section className="flex flex-wrap justify-center w-full  relative">
-              <div
-                className="bg-no-repeat bg-contain bg-center  w-full py-52 hidden sm:w-1/2 sm:inline-block md:-mt-20 laglag"
-                 
-              >
-               
-              </div>
+              <div className="bg-no-repeat bg-contain bg-center  w-full py-52 hidden sm:w-1/2 sm:inline-block md:-mt-20 laglag"></div>
               <div className="w-full py-4 sm:w-1/2 md:py-8 lg:pl-8 lg:w-1/3">
                 <div className="text-2xl lg:text-3xl font-black">
                   Be a member <br /> of our community 🎉
@@ -63,8 +56,9 @@ function Footer() {
             </div>
           </section>
           <nav className="border-t border-dark-light font-medium text-xs text-center pt-4 md:hidden">
-            <div className="cursor-pointer flex p-4 justify-center items-center hover:text-primary-light"
-            onClick={() => setMoreOption(!moreOption)} 
+            <div
+              className="cursor-pointer flex p-4 justify-center items-center hover:text-primary-light"
+              onClick={() => setMoreOption(!moreOption)}
             >
               <div>Show More Option</div>
               <img
@@ -74,9 +68,11 @@ function Footer() {
               />
             </div>
           </nav>
-          <section className={ moreOption ? ' flex flex-col uppercase mt-2' : ' hidden md:block'
-                
-              }>
+          <section
+            className={
+              moreOption ? " flex flex-col uppercase mt-2" : " hidden md:block"
+            }
+          >
             <section className="flex flex-col lg:flex lg:flex-row  lg:px-[120px] mx-auto lg:mx-5 lg:text-left text-center py-4 md:py-12">
               <div className="px-2 pt-4 w-full justify-center md:px-4 lg:w-1/5">
                 <div className="font-bold text-base py-4 text-gray-100">
@@ -106,7 +102,6 @@ function Footer() {
                 >
                   Press &amp; Media
                 </a>
-           
               </div>
               <div className="px-2 pt-4 w-full md:px-4 lg:w-1/5">
                 <div className="font-bold text-base py-4 text-gray-100">
@@ -164,12 +159,12 @@ function Footer() {
                   className="font-medium my-1 text-xs py-2 text-gray-300  block hover:text-[#FF5C00]"
                 >
                   Become a Campus Writer
-                </a>       
+                </a>
                 <a
                   href="https://vasiti.com/contact#/career"
                   className="font-medium my-1 text-xs py-2 text-gray-300  block hover:text-[#FF5C00]"
                 >
-                   Become an Affliate
+                  Become an Affliate
                 </a>
               </div>
               <div className="px-2 pt-4 w-full md:px-4 lg:w-1/5">
@@ -248,7 +243,6 @@ function Footer() {
               </div>
             </section>
           </section>
-         
         </section>
       </footer>
     </div>

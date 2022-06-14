@@ -1,10 +1,10 @@
-import React from 'react';
-import sus from '../../assets/success.svg';
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import Loader from '../Loader';
-import zigzag from '../../assets/zigzag.svg';
+import React from "react";
+import sus from "../../assets/success.svg";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import Loader from "../Loader";
+import zigzag from "../../assets/zigzag.svg";
 
 function Stories() {
   const [posts, setPosts] = useState([]);
@@ -12,11 +12,11 @@ function Stories() {
   const [story, setStory] = useState(false);
   const [isPending, setIsPending] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [pix, setPix] = useState('');
-  const [fname, setFname] = useState('');
-  const [lname, setLname] = useState('');
-  const [comment, setComment] = useState('');
-  const [title, setTitle] = useState('');
+  const [pix, setPix] = useState("");
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [comment, setComment] = useState("");
+  const [title, setTitle] = useState("");
 
   const navigate = useNavigate();
 
@@ -25,33 +25,32 @@ function Stories() {
     setShow(!show);
   };
 
-// handles shared post button
+  // handles shared post button
 
   // Handles close popup menu
   const handleClosePost = () => {
     setShow(!show);
     // Empty all inputs
-    setFname('');
-    setLname('');
-    setPix('');
-    setComment('');
-    setTitle('');
+    setFname("");
+    setLname("");
+    setPix("");
+    setComment("");
+    setTitle("");
   };
-
 
   // Handles close popup menu
   const handleClose = () => {
     setStory(!story);
     setShow(!show);
     // Empty all inputs
-    setFname('');
-    setLname('');
-    setPix('');
-    setComment('');
-    setTitle('');
+    setFname("");
+    setLname("");
+    setPix("");
+    setComment("");
+    setTitle("");
     // Navigate to the story page
-    navigate('/stories');
-    console.log('close btn clicked');
+    navigate("/stories");
+    console.log("close btn clicked");
   };
 
   // handles radio button
@@ -62,18 +61,22 @@ function Stories() {
   //   Handle pix upload
   function handleUpload(e) {
     // const preview = document.querySelector('img');
-    const file = document.querySelector('input[type=file]').files[0];
+    const file = document.querySelector("input[type=file]").files[0];
     const reader = new FileReader();
-  
-    reader.addEventListener("load", function () {
-      // convert image file to base64 string
-      setPix(reader.result);
-    }, false);
-  
+
+    reader.addEventListener(
+      "load",
+      function () {
+        // convert image file to base64 string
+        setPix(reader.result);
+      },
+      false
+    );
+
     if (file) {
       reader.readAsDataURL(file);
     }
-    }
+  }
 
   // Handles Fetch Data
 
@@ -98,12 +101,12 @@ function Stories() {
     e.preventDefault();
     let postData = { pix, fname, lname, comment, title };
     setIsPending(true);
-    fetch('https://airy-verdant-shoemaker.glitch.me/posts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    fetch("https://airy-verdant-shoemaker.glitch.me/posts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(postData),
     }).then(() => {
-      console.log('New Post Added');
+      console.log("New Post Added");
       setIsPending(false);
       setStory(!story);
     });
@@ -123,19 +126,20 @@ function Stories() {
       <>
         {show ? (
           <div className="w-screen top-0 left-0 fixed bg-slate-50 lg:h-screen h-screen z-40 flex justify-center items-center ">
-          
             <div className="lg:max-h-[570px] lg:max-w-[527px] bg-white rounded-xl drop-shadow-lg text-center lg:px-12 px-8 position-relative">
-            <p className="fixed -right-10 top-4 -translate-y-2 -translate-x-12 h-8 w-8 flex justify-center items-center hover:bg-red-400 hover:text-white p-2 bg-slate-200 z-10 rounded-full cursor-pointer"
-            onClick={handleClosePost}>X</p>
+              <p
+                className="fixed -right-10 top-4 -translate-y-2 -translate-x-12 h-8 w-8 flex justify-center items-center hover:bg-red-400 hover:text-white p-2 bg-slate-200 z-10 rounded-full cursor-pointer"
+                onClick={handleClosePost}
+              >
+                X
+              </p>
               <h2 className="lg:mt-[15px] mt-6 font-bold lg:text-3xl text-2xl">
                 Share your amazing story!
               </h2>
-             
 
               {/* Form Section */}
 
               <form className="lg:mt-[25px] mt-6" onSubmit={handleSubmit}>
-              
                 {/* Form Title */}
                 <div className="flex flex-col justify-start text-left space-y-2">
                   <label className="text-xs">Upload your Picture </label>
@@ -268,7 +272,7 @@ function Stories() {
                       disabled
                     >
                       <img src={zigzag} alt="zigzag" />
-                    Sharing
+                      Sharing
                     </button>
                   )}
                 </div>
@@ -276,7 +280,7 @@ function Stories() {
             </div>
           </div>
         ) : (
-          ''
+          ""
         )}
       </>
 
@@ -294,7 +298,7 @@ function Stories() {
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Recusandae neque expedita est unde perferendis, vero omnis, nemo
-                atque{' '}
+                atque{" "}
               </p>
             </article>
             <div className="my-16">
@@ -309,7 +313,7 @@ function Stories() {
           </div>
         </div>
       ) : (
-        ''
+        ""
       )}
 
       {/* Loader */}
@@ -317,31 +321,34 @@ function Stories() {
 
       <section className="flex flex-col lg:grid-cols-3 lg:grid lg:gap-12 container lg:items-center px-8 lg:px-24 space-y-24 lg:space-y-0 lg:my-32 my-16 mx-auto">
         {/* Fetching Stories from the Server */}
-        {posts?.slice(0).reverse().map((post) => (
-          <div className="">
-            <img
-              src={post.pix}
-              alt={post.fname}
-              className=" w-[200px] border-[0.5px] border-[#FF5C00] h-[200px] rounded-full my-4 lg:my-4 object-cover"
-            />
-            <h5 className="font-bold text-2xl">
-              {post.fname} {post.lname}
-            </h5>
-            <div className="uppercase space-x-4 flex my-4 items-center font-bold">
-              {/* <p>{}</p> */}
-              <p
-                className={
-                  post.title === 'vendor'
-                    ? 'bg-green-100 p-2 text-[#049A01]'
-                    : 'bg-blue-100 p-2'
-                }
-              >
-                {post.title}
-              </p>
+        {posts
+          ?.slice(0)
+          .reverse()
+          .map((post) => (
+            <div className="">
+              <img
+                src={post.pix}
+                alt={post.fname}
+                className=" w-[200px] border-[0.5px] border-[#FF5C00] h-[200px] rounded-full my-4 lg:my-4 object-cover"
+              />
+              <h5 className="font-bold text-2xl">
+                {post.fname} {post.lname}
+              </h5>
+              <div className="uppercase space-x-4 flex my-4 items-center font-bold">
+                {/* <p>{}</p> */}
+                <p
+                  className={
+                    post.title === "vendor"
+                      ? "bg-green-100 p-2 text-[#049A01]"
+                      : "bg-blue-100 p-2"
+                  }
+                >
+                  {post.title}
+                </p>
+              </div>
+              <p>{post.comment}</p>
             </div>
-            <p>{post.comment}</p>
-          </div>
-        ))}
+          ))}
       </section>
     </div>
   );
