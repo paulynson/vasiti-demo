@@ -62,6 +62,7 @@ function Stories() {
   function handleUpload(e) {
     // const preview = document.querySelector('img');
     const file = document.querySelector("input[type=file]").files[0];
+    let checkFile = file;
     const reader = new FileReader();
 
     reader.addEventListener(
@@ -73,26 +74,28 @@ function Stories() {
       false
     );
 
-    if (file) {
-      reader.readAsDataURL(file);
+    if (checkFile) {
+      reader.readAsDataURL(checkFile);
     }
   }
 
   // Handles Fetch Data
 
-  useEffect(() => {
-    const handlesFetchData = async () => {
-      setLoading(true);
-      const res = await axios.get(
-        `https://airy-verdant-shoemaker.glitch.me/posts`
-      );
-      setPosts(res.data);
-      // console.log(res.data);
-      setLoading(false);
-    };
+  const handlesFetchData = async () => {
+    setLoading(true);
+    const res = await axios.get(
+      `https://airy-verdant-shoemaker.glitch.me/posts`
+    );
+    setPosts(res.data);
+    // console.log(res.data);
+    setLoading(false);
+  };
 
+  // Handles Fetch Data
+
+  useEffect(() => {
     handlesFetchData();
-  }, [setPosts]);
+  }, []);
 
   // Handles Fetch Data
 
@@ -106,9 +109,11 @@ function Stories() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(postData),
     }).then(() => {
-      console.log("New Post Added");
+      // console.log("New Post Added");
       setIsPending(false);
       setStory(!story);
+      // Load the page once a post request is made
+      handlesFetchData();
     });
   };
 
