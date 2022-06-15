@@ -6,7 +6,7 @@ import Footer from "./components/layouts/Footer";
 
 function App() {
   return (
-    <div className="lg:px-0 w-screen overflow-x-hidden">
+    <div className="lg:px-0 w-screen">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
