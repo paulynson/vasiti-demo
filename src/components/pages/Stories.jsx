@@ -155,7 +155,8 @@ function Stories() {
                     accept="jpeg, png, jpg"
                     type="file"
                     required
-                    // value={pix}
+                    accept="image/*,capture=camera"
+                    // capture="”camera"
                     onChange={handleUpload}
                   />
                 </div>
