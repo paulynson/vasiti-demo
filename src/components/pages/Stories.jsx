@@ -22,35 +22,31 @@ function Stories() {
 
   // Handles popup menu
   const handleShow = (e) => {
-    setShow(!show);
+    setShow((prevShow) => !prevShow);
   };
 
   // handles shared post button
 
   // Handles close popup menu
   const handleClosePost = () => {
-    setShow(!show);
-    // Empty all inputs
+    setShow(false);
+    clearInputFields()
+  };
+
+  // clear input
+  const clearInputFields = () => {
     setFname("");
     setLname("");
-    setPix("");
     setComment("");
     setTitle("");
   };
 
   // Handles close popup menu
   const handleClose = () => {
-    setStory(!story);
-    setShow(!show);
-    // Empty all inputs
-    setFname("");
-    setLname("");
-    setPix("");
-    setComment("");
-    setTitle("");
-    // Navigate to the story page
+    setStory(false);
+    setShow(false);
+     clearInputFields()
     navigate("/stories");
-    console.log("close btn clicked");
   };
 
   // handles radio button
@@ -60,27 +56,20 @@ function Stories() {
 
   //   Handle pix upload
   function handleUpload(e) {
-    // const preview = document.querySelector('img');
-    const file = document.querySelector("input[type=file]").files[0];
-    let checkFile = file;
-    const reader = new FileReader();
-
-    reader.addEventListener(
-      "load",
-      function () {
-        // convert image file to base64 string
+    const file = e.target.files[0];
+  
+    if (file) {
+      const reader = new FileReader();
+  
+      reader.addEventListener("load", () => {
         setPix(reader.result);
-      },
-      false
-    );
-
-    if (checkFile) {
-      reader.readAsDataURL(checkFile);
+      });
+  
+      reader.readAsDataURL(file);
     }
   }
 
   // Handles Fetch Data
-
   const handlesFetchData = async () => {
     setLoading(true);
     const res = await axios.get(
@@ -92,12 +81,9 @@ function Stories() {
   };
 
   // Handles Fetch Data
-
   useEffect(() => {
     handlesFetchData();
   }, []);
-
-  // Handles Fetch Data
 
   // handles Post request
   const handleSubmit = (e) => {
@@ -109,13 +95,13 @@ function Stories() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(postData),
     }).then(() => {
-      // console.log("New Post Added");
       setIsPending(false);
       setStory(!story);
-      // Load the page once a post request is made
       handlesFetchData();
     });
   };
+
+
 
   return (
     <div className="container mx-auto lg:px-[64px] px-8 lg:my-24">
@@ -324,19 +310,19 @@ function Stories() {
       {/* Loader */}
       <div className="my-6">{loading && <Loader />}</div>
 
-      <section className="flex flex-col lg:grid-cols-3 lg:grid lg:gap-12 container lg:items-center px-8 lg:px-24 space-y-24 lg:space-y-0 lg:my-32 my-16 mx-auto">
+      <section className="lg:grid grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 lg:gap-4 grid-cols-1 gap-4 my-6 text-left flex-start">
         {/* Fetching Stories from the Server */}
         {posts
           ?.slice(0)
           .reverse()
           .map((post) => (
-            <div className="">
+            <div className="bg-white rounded-lg p-4 items-start content-start min-w-full">
               <img
                 src={post.pix}
                 alt={post.fname}
-                className=" w-[200px] border-[0.5px] border-[#FF5C00] h-[200px] rounded-full my-4 lg:my-4 object-cover"
+                className="w-[100px] h-[100px] rounded-full self-start inline-block"
               />
-              <h5 className="font-bold text-2xl">
+              <h5 className="font-bold text-xl">
                 {post.fname} {post.lname}
               </h5>
               <div className="uppercase space-x-4 flex my-4 items-center font-bold">
@@ -344,14 +330,14 @@ function Stories() {
                 <p
                   className={
                     post.title === "vendor"
-                      ? "bg-green-100 p-2 text-[#049A01]"
-                      : "bg-blue-100 p-2"
+                      ? "bg-green-100 p-2 text-[#049A01] text-sm"
+                      : "bg-blue-100 p-2 text-sm"
                   }
                 >
                   {post.title}
                 </p>
               </div>
-              <p>{post.comment}</p>
+              <p className="text-gray-600 text-sm my-4">{post.comment}</p>
             </div>
           ))}
       </section>

@@ -11,12 +11,12 @@ function Home() {
       {/* Hero Section */}
       <section className="flex flex-wrap container mx-auto px-8 lg:px-[94px] ">
         <div className="lg:w-1/2 lg:py-[128px] py-[64px]">
-          <h2 className="my-[24px] lg:text-[48px] text-4xl lg:leading-[50px] font-bold text-black">
+          <h2 className="my-[24px] lg:text-[48px] text-4xl lg:leading-[50px] font-bold text-black lg:text-left text-center">
             <span className="block">Amazing</span>
             <span className="block">Experiences from Our</span>
             <span className="block">Wonderful Customers</span>
           </h2>
-          <p className="text-[#494949] max-w-lg">
+          <p className="text-[#494949] max-w-lg lg:text-left text-center">
             <span className="lg:block">
               Here is what customers and vendors are saying about
             </span>{" "}
@@ -55,13 +55,13 @@ function Home() {
             />
           </div>
 
-          <div className="lg:w-1/2 lg:px-16 px-8 lg:py-[64px]">
+          <div className="lg:w-1/2 lg:px-16 px-2 lg:py-[64px] lg:text-left text-center">
             <h4 className="my-[24px] text-[32px] text-white">
               Tolu & Joy’s Experience
             </h4>
-            <p className="text-white py-[7px] px-[14px] border text-center rounded-sm w-[135px] mb-12">
+            <button className="text-white py-[7px] px-[14px] border text-center rounded-sm  mb-12 lg:text-left">
               CUSTOMER
-            </p>
+            </button>
 
             <p className="text-white">
               I had the best experience shopping with vasiti. Usability of the
@@ -83,16 +83,16 @@ function Home() {
 
       <section className="flex flex-col lg:grid-cols-3 lg:grid lg:gap-12 container lg:items-center px-8 lg:px-24 space-y-24 lg:space-y-0 my-16 mx-auto">
         {/* First Content */}
-        <div className="">
+        <div className="lg:text-left text-center">
           <img
             src="https://i.ibb.co/3TJX60j/joe.png"
             alt="Ike"
             className=" w-[200px] h-[200px]"
           />
           <h5 className="font-bold text-2xl mt-[32px]">Joseph Ike</h5>
-          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
-            <p>In Ikeja</p>
-            <p className="bg-blue-100 p-2">customer</p>
+          <div className="uppercase space-x-4 flex lg:justify-start justify-center my-3 items-center font-bold lg:text-left text-center">
+            <p className="lg:text-left text-center">In Ikeja</p>
+            <p className="bg-blue-100 p-2 lg:text-left text-center">customer</p>
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo
@@ -103,14 +103,14 @@ function Home() {
         </div>
 
         {/* Second Content */}
-        <div className="">
+        <div className="lg:text-left text-center">
           <img
             src="https://i.ibb.co/ZL7mcq4/ade.png"
             alt="Ade"
             className=" w-[200px] h-[200px]"
           />
           <h5 className="font-bold text-2xl mt-[32px]">Adetola Fashina</h5>
-          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
+          <div className="uppercase space-x-4 flex lg:justify-start justify-center my-3 items-center font-bold lg:text-left text-center">
             <p>Ibadan</p>
             <p className="bg-blue-100 p-2">customer</p>
           </div>
@@ -123,14 +123,14 @@ function Home() {
         </div>
 
         {/* Third Content */}
-        <div className="">
+        <div className="lg:text-left text-center">
           <img
             src="https://i.ibb.co/bv89SF2/emma.png"
             alt="Emma"
             className=" w-[200px] h-[200px]"
           />
           <h5 className="font-bold text-2xl mt-[32px]">Emmanuel Fayemi</h5>
-          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
+          <div className="uppercase space-x-4 flex lg:justify-start justify-center my-3 items-center font-bold lg:text-left text-center">
             <p>In Akoka</p>
             <p className="bg-blue-100 p-2">customer</p>
           </div>
@@ -143,14 +143,14 @@ function Home() {
         </div>
 
         {/* Forth Content */}
-        <div className="">
+        <div className="lg:text-left text-center">
           <img
             src="https://i.ibb.co/b3prKQt/chisom.png"
             alt="chisom"
             className="w-[200px] h-[200px]"
           />
           <h5 className="font-bold text-2xl mt-[32px]">Chisom Obilor</h5>
-          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
+          <div className="uppercase space-x-4 flex lg:justify-start justify-center my-3 items-center font-bold lg:text-left text-center">
             <p>In Ikeja</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -163,14 +163,14 @@ function Home() {
         </div>
 
         {/* Fifth Content */}
-        <div className="">
+        <div className="lg:text-left text-center">
           <img
             src="https://i.ibb.co/h2TYfBg/adu.png"
             alt="Adu"
             className=" w-[200px] h-[200px]"
           />
           <h5 className="font-bold text-2xl mt-[32px]">Adunoluwa Adeyemi</h5>
-          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
+          <div className="uppercase space-x-4 flex lg:justify-start justify-center my-3 items-center font-bold lg:text-left text-center">
             <p>Ibadan</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -183,14 +183,14 @@ function Home() {
         </div>
 
         {/* Sixth Content */}
-        <div className="">
+        <div className="lg:text-left text-center">
           <img
             src="https://i.ibb.co/nbH0Mvd/chidi.png"
             alt="Chidi"
             className=" w-[200px] h-[200px]"
           />
           <h5 className="font-bold text-2xl mt-[32px]">Chidi Okeke</h5>
-          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
+          <div className="uppercase space-x-4 flex lg:justify-start justify-center my-3 items-center font-bold lg:text-left text-center">
             <p>In Akoka</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -206,17 +206,17 @@ function Home() {
       {/* Forth Section */}
 
       {/*  */}
-      <section className=" bg-white lg:w-full px-8">
+      <section className=" bg-white lg:w-full lg:px-8 px-2">
         <div className="lg:px-[70px] pt-24 lg:flex lg:relative flex  lg:flex-row flex-col-reverse">
-          <div className="lg:w-1/2  px-8 lg:py-[64px]">
+          <div className="lg:w-1/2  px-8 lg:py-[64px] lg:text-left text-center">
             <h4 className="my-[24px] text-[32px] text-black">
               Tolu & Joy’s Experience
             </h4>
-            <p className="text-[#FF5C00] py-[7px] px-[10px] border text-center border-[#FF5C00] uppercase rounded-sm w-[95px] mb-12">
+            <button className="text-[#FF5C00] lg:text-left py-[7px] px-[10px] border text-center border-[#FF5C00] uppercase rounded-sm mb-12">
               Vendor
-            </p>
+            </button>
 
-            <p className="text-black lg:max-w-lg">
+            <p className="text-black lg:max-w-lg lg:text-left text-center">
               I had the best experience shopping with vasiti. Usability of the
               website was great, very good customer service, an all round great
               experience. I would definately be coming back! I had the best
@@ -250,14 +250,14 @@ function Home() {
 
       <section className="flex flex-col lg:grid-cols-3 lg:grid lg:gap-12 container lg:items-center px-8 lg:px-24 space-y-24 lg:space-y-0 my-16 mx-auto lg:my-24">
         {/* First Content */}
-        <div className="">
+        <div className="lg:text-left text-center">
           <img
             src="https://i.ibb.co/3yRtcTd/Ellipse-22-3.png"
             alt="Temi"
             className=" w-[200px] h-[200px]"
           />
           <h5 className="font-bold text-2xl mt-[32px]">Temi Obadofin</h5>
-          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
+          <div className="uppercase space-x-4 flex lg:justify-start justify-center my-3 items-center font-bold lg:text-left text-center">
             <p>In Ikeja</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -270,14 +270,14 @@ function Home() {
         </div>
 
         {/* Second Content */}
-        <div className="">
+        <div className="lg:text-left text-center">
           <img
             src="https://i.ibb.co/9sMFswh/Ellipse-23-2.png"
             alt="Promise"
             className=" w-[200px] h-[200px]"
           />
           <h5 className="font-bold text-2xl mt-[32px]">Promise Ejiofor</h5>
-          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
+          <div className="uppercase space-x-4 flex lg:justify-start justify-center my-3 items-center font-bold lg:text-left text-center">
             <p>Ibadan</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -290,14 +290,14 @@ function Home() {
         </div>
 
         {/* Third Content */}
-        <div className="">
+        <div className="lg:text-left text-center">
           <img
             src="https://i.ibb.co/9ZpRr84/Ellipse-24-2.png"
             alt="Feyisola"
             className=" w-[200px] h-[200px]"
           />
           <h5 className="font-bold text-2xl">Feyisola Arinola</h5>
-          <div className="uppercase space-x-4 flex my-4 items-center font-bold">
+          <div className="uppercase space-x-4 flex lg:justify-start justify-center my-3 items-center font-bold lg:text-left text-center">
             <p>In Akoka</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -310,14 +310,14 @@ function Home() {
         </div>
 
         {/* Forth Content */}
-        <div className="">
+        <div className="lg:text-left text-center">
           <img
             src="https://i.ibb.co/cJzWF9S/Ellipse-22-4.png"
             alt="Karen"
             className="w-[200px] h-[200px]"
           />
           <h5 className="font-bold text-2xl mt-[32px]">Karen Ibeh</h5>
-          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
+          <div className="uppercase space-x-4 flex lg:justify-start justify-center my-3 items-center font-bold lg:text-left text-center">
             <p>In Ikeja</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -330,14 +330,14 @@ function Home() {
         </div>
 
         {/* Fifth Content */}
-        <div className="">
+        <div className="lg:text-left text-center">
           <img
             src="https://i.ibb.co/vLmNRF8/Ellipse-23-3.png"
             alt="Oluchi"
             className=" w-[200px] h-[200px]"
           />
           <h5 className="font-bold text-2xl mt-[32px]">Oluchi Uzo</h5>
-          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
+          <div className="uppercase space-x-4 flex lg:justify-start justify-center my-3 items-center font-bold lg:text-left text-center">
             <p>Ibadan</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>
@@ -350,14 +350,14 @@ function Home() {
         </div>
 
         {/* Sixth Content */}
-        <div className="">
+        <div className="lg:text-left text-center">
           <img
             src="https://i.ibb.co/HYkxh06/Ellipse-24-3.png"
             alt="Amos"
             className=" w-[200px] h-[200px]"
           />
           <h5 className="font-bold text-2xl mt-[32px]">Amos Okafor</h5>
-          <div className="uppercase space-x-4 flex my-3 items-center font-bold">
+          <div className="uppercase space-x-4 flex lg:justify-start justify-center my-3 items-center font-bold lg:text-left text-center">
             <p>In Akoka</p>
             <p className="bg-green-100 p-2 text-[#049A01]">vendor</p>
           </div>

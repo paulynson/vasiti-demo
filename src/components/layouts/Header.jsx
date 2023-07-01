@@ -1,30 +1,32 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import { NavLink, Link } from "react-router-dom";
-// import {useState} from 'react'
 import "flowbite";
-import vasiti from "../../assets/Vasiti-Logo-black 1.png";
+import vasiti from "../../assets/Vasiti_logo.png";
 
-function Navbar() {
+function Header() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [moreOption, setMoreOption] = useState(false);
+ 
 
   return (
-    <header className=" flex justify-center text-center items-center flex-col">
+    <header className="container px-3">
       <>
-        <nav className="flex  flex-wrap container mx-auto items-center justify-between lg:py-4 lg:px-[84px] px-8 py-8 bg-white text-[#242120] ">
-          <div className="container px-4  flex flex-wrap items-center justify-between">
-            <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-              <Link
+        <nav className="flex w-full items-center justify-between lg:px-0 py-2 bg-white text-[#242120]">
+          <div className="container  flex flex-wrap items-center justify-between">
+            <div className="w-[100%] flex justify-between items-center lg:w-auto lg:justify-start">
+            <div className="flex items-center justify-start m-0">
+            <Link
                 to="/"
-                className="text-xl font-semibold  text-[#242120] uppercase"
-              >
-                <img src={vasiti} alt="vasati" className="w-[150px] h-[35px]" />
+                className="m-0"
+              >                <img src={vasiti} alt="vasati" className="" />
               </Link>
-              <button
+            </div>
+                {/* Button */}
+                <button
                 button
                 data-collapse-toggle="mobile-menu"
                 type="button"
-                className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                className="inline-flex justify-end items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
                 onClick={() => setNavbarOpen(!navbarOpen)}
@@ -55,6 +57,8 @@ function Navbar() {
                   ></path>
                 </svg>
               </button>
+              {/* Button */}
+              
             </div>
             <div
               className={
@@ -63,7 +67,8 @@ function Navbar() {
               }
               id="example-navbar-danger"
             >
-              <ul className="flex lg:rounded-none rounded-md lg:w-auto lg:mx-0 lg:shadow-none lg:drop-shadow-none flex-col mx-auto my-6 bg-[#f5dcce13] drop-shadow-lg shadow-lg lg:bg-white w-full py-6 lg:flex-row list-none lg:ml-auto text-[13px]">
+            
+              <ul className="flex lg:rounded-none rounded-md lg:w-auto lg:mx-0 lg:shadow-none lg:drop-shadow-none flex-col mx-auto my-6 bg-[#f5dcce13] drop-shadow-lg shadow-lg lg:bg-white w-full py-2 lg:flex-row list-none lg:ml-auto text-[13px]">
                 <li className="my-y lg:my-3 px-4 my-6">
                   <NavLink
                     to="/about"
@@ -98,7 +103,7 @@ function Navbar() {
                     Login
                   </NavLink>
                 </li>
-                <li className="my-y lg:my-3 px-4 my-6">
+                <li className="my-y lg:my-3 lg:px-0 px-4 my-6">
                   <NavLink
                     to="/signup"
                     className="text-white bg-[#FF5C00] hover:bg-[#FF5C3d] hover:text-white px-6 py-3 rounded-md  hover:cursor-pointer uppercase"
@@ -111,7 +116,7 @@ function Navbar() {
           </div>
         </nav>
       </>
-      <section>
+      <section className="flex justify-between items-center flex-col">
         <span className="sr-only">Open main menu</span>
         <span
           className="flex items-center lg:hidden text-[12px] hover:opacity-80 text-slate-600 cursor-pointer"
@@ -145,7 +150,7 @@ function Navbar() {
         >
           <a
             href="/#"
-            className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00]"
+            className="py-[17px] px-[16px]  hover:bg-slate-100 hover:text-[#FF5C00] lg:m-0 m-auto"
           >
             marketplace
           </a>
@@ -185,4 +190,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Header;
